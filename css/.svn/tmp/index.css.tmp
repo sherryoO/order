@@ -1,3 +1,4 @@
+<<<<<<< .mine
 body { padding: 0; margin: 20px; }
 
 .green { background: #92d050; }
@@ -63,7 +64,7 @@ input, button, p {
   margin: 0; }
 
 /*# sourceMappingURL=index.css.map */
-
+=======
 body {
   padding: 0;
   margin: 20px; }
@@ -108,4 +109,4 @@ input, button, p {
   margin: 0; }
 
 /*# sourceMappingURL=index.css.map */
-
+>>>>>>> .r1749
