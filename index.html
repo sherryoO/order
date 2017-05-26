@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>订单看板</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+        body{
+            overflow-y: scroll;
+        }
+        ::-webkit-scrollbar {
+            width:10px;
+            height:0;
+            border-radius:10px;
+        }
+        ::-webkit-scrollbar-thumb:vertical {
+            background:#999;
+            border-radius:10px
+        }
+        ::-webkit-scrollbar-thumb:vertical:hover {
+            background:#666
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th  colspan="4">汇总数据</th>
+                    <th  colspan="2">订单期</th>
+                    <th  colspan="2" class="yellow">0</th>
+                    <th  colspan="2" class="red">0</th>
+                    <th  colspan="10">磨合期</th>
+                    <th  colspan="2" class="yellow">6</th>
+                    <th  colspan="2" class="red">0</th>
+                    <th  colspan="12">施工期</th>
+                    <th  colspan="2" class="yellow">4</th>
+                    <th  colspan="2" class="red">16</th>
+                    <th  colspan="6">干系人</th>
+                    <th>67</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <colgroup span="6"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2" class="gray"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="1" class="gray"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1" class="gray"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1" class="gray"></colgroup>
+                    <td rowspan="2">类型</td>
+                    <td rowspan="2">正常</td>
+                    <td rowspan="2" class="yellow">黄</td>
+                    <td rowspan="2" class="red">红</td>
+                    <td colspan="2" class="green">订金</td>
+                    <td colspan="2">签约</td>
+                    <td colspan="2">财审</td>
+                    <td colspan="2">管家</td>
+                    <td colspan="2">首谈</td>
+                    <td colspan="2">量房</td>
+                    <td colspan="2">验房</td>
+                    <td colspan="2">初案</td>
+                    <td colspan="2">深化</td>
+                    <td colspan="2">定案</td>
+                    <td colspan="2">开工</td>
+                    <td colspan="2">2验</td>
+                    <td colspan="2">3验</td>
+                    <td colspan="2">4验</td>
+                    <td colspan="2">5验</td>
+                    <td colspan="2">6验</td>
+                    <td colspan="2">7验</td>
+                    <td colspan="2">交付</td>
+                    <td>姓名</td>
+                    <td>反感</td>
+                    <td>设计</td>
+                    <td>项目</td>
+                    <td>监理</td>
+                    <td>销售</td>
+                    <td>管家</td>
+                </tr>
+                <tr>
+                    <td>总值</td>
+                    <td>均值</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td>黄</td>
+                    <td>红</td>
+                    <td colspan="2">客户反感</td>
+                    <td>44</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>全局</td>
+                    <td>10000000000</td>
+                    <td class="yellow">15</td>
+                    <td class="red">2</td>
+                    <td>7</td>
+                    <td>3.5</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td colspan="2">TOP10</td>
+                    <td colspan="5" style="background: #fff">TOP5</td>
+                </tr>
+                <tr>
+                    <td>100天</td>
+                    <td>400</td>
+                    <td class="yellow">5</td>
+                    <td class="red">2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td>李四</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>120天</td>
+                    <td>300</td>
+                    <td class="yellow">4</td>
+                    <td class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>王五</td>
+                    <td>李四</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>150天</td>
+                    <td>200</td>
+                    <td class="yellow">0</td>
+                    <td class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>王五</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>180天</td>
+                    <td>50</td>
+                    <td class="yellow">5</td>
+                    <td class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>其它</td>
+                    <td>50</td>
+                    <td class="yellow">1</td>
+                    <td class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+
+
+
+        </table >
+        <table id="table2">
+            <tbody>
+                <tr>
+                    <td>类型</td>
+                    <td colspan="3">异常</td>
+                    <td colspan="43"></td>
+                </tr>
+                <tr>
+                    <colgroup span="42"></colgroup>
+                    <colgroup span="1" class="gray"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1" class="gray"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1" class="gray"></colgroup>
+                    <td>100天</td>
+                    <td>施工</td>
+                    <td>交付</td>
+                    <td class="yellow"></td>
+                    <td>7</td>
+                    <td>12</td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td>张三</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>施工</td>
+                    <td>交付</td>
+                    <td class="yellow"></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="red"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td>洪七</td>
+                    <td>3</td>
+                    <td>李四</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>施工</td>
+                    <td>交付</td>
+                    <td class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>王五</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>7</td>
+                    <td class="yellow"></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td>2</td>
+                    <td>王五</td>
+                    <td></td>
+                    <td>赵六</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>类型</td>
+                    <td colspan="3">异常</td>
+                    <td colspan="43"></td>
+                </tr>
+                <tr>
+                    <td>120天</td>
+                    <td>施工</td>
+                    <td>交付</td>
+                    <td class="yellow"></td>
+                    <td>7</td>
+                    <td>12</td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td>张三</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>施工</td>
+                    <td>交付</td>
+                    <td class="yellow"></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="red"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td>洪七</td>
+                    <td>3</td>
+                    <td>李四</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>施工</td>
+                    <td>交付</td>
+                    <td class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="red"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>王五</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>7</td>
+                    <td class="yellow"></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="green"></td>
+                    <td colspan="2" class="yellow"></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td>2</td>
+                    <td>王五</td>
+                    <td></td>
+                    <td>赵六</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>类型</td>
+                    <td colspan="3">异常</td>
+                    <td colspan="43"></td>
+                </tr>
+                <tr>
+                    <td>150天</td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="yellow"></td>
+                        <td>7</td>
+                        <td>12</td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td>张三</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="yellow"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="red"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td>洪七</td>
+                        <td>3</td>
+                        <td>李四</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="red"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="red"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>王五</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>7</td>
+                        <td class="yellow"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td>2</td>
+                        <td>王五</td>
+                        <td></td>
+                        <td>赵六</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>类型</td>
+                    <td colspan="3">异常</td>
+                    <td colspan="43"></td>
+                </tr>
+                <tr>
+                    <td>180天</td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="yellow"></td>
+                        <td>7</td>
+                        <td>12</td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td>张三</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="yellow"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="red"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td>洪七</td>
+                        <td>3</td>
+                        <td>李四</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="red"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="red"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>王五</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>7</td>
+                        <td class="yellow"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td>2</td>
+                        <td>王五</td>
+                        <td></td>
+                        <td>赵六</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>类型</td>
+                    <td colspan="3">异常</td>
+                    <td colspan="43"></td>
+                </tr>
+                <tr>
+                    <td>其他</td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="yellow"></td>
+                        <td>7</td>
+                        <td>12</td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td>张三</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="yellow"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="red"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td>洪七</td>
+                        <td>3</td>
+                        <td>李四</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>施工</td>
+                        <td>交付</td>
+                        <td class="red"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="red"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>王五</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>7</td>
+                        <td class="yellow"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="green"></td>
+                        <td colspan="2" class="yellow"></td>
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td>2</td>
+                        <td>王五</td>
+                        <td></td>
+                        <td>赵六</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+    window.onload = function(){
+            var tW = $(".wrap").width();
+            var tablefixH = $("#myTable").height();
+            console.log(tW,tablefixH);
+            $("#table2").css("margin-top",tablefixH-1);
+            $("#myTable").width(tW);
+            console.log(tW)
+    }
+</script>
+</body>
+</html>
+
+

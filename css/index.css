@@ -1,0 +1,21 @@
+body { padding: 0; margin: 20px; }
+
+.green { background: #92d050; }
+
+.yellow { background: #ffff00; }
+
+.red { background: red; }
+
+.gray { background: #cfcfd1; }
+
+#myTable { position: fixed; top: 0; }
+
+table { width: 100%; background: #fff; border-collapse: collapse; table-layout: fixed; }
+table thead { background: #fff; }
+table th, table td { text-align: center; padding: 8px 0; font-size: 14px; border: 1px solid #666; }
+table th { font-size: 16px; }
+table td { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+input, button, p, h1 { padding: 0; margin: 0; }
+
+/*# sourceMappingURL=index.css.map */

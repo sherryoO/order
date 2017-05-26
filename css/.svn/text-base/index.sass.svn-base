@@ -1,0 +1,45 @@
+body
+  padding: 0
+  margin: 20px
+
+//颜色
+$green:#92d050
+$yellow:#ffff00
+$red:red
+$gray:#666
+$grayBg:#cfcfd1
+//公共样式
+.green
+  background: $green
+.yellow
+  background: $yellow
+.red
+  background: $red
+.gray
+  background: $grayBg
+//固定头部table
+#myTable
+  position: fixed
+  top: 0
+//定义表格默认样式
+table
+  width: 100%
+  background: #fff
+  border-collapse: collapse
+  table-layout: fixed
+  thead
+    background: #fff
+  th,td
+    text-align: center
+    padding: 8px 0
+    font-size: 14px
+    border: 1px solid $gray
+  th
+    font-size: 16px
+  td
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+input,button,p
+  padding: 0
+  margin: 0

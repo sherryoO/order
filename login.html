@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>订单看板-登录</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+    	#loginBox{
+    		width: 25%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);padding-bottom: 50px;
+    	}
+    	#logo{
+    		width: 100%; display: block;
+    	}
+    	h1{
+    		text-align: center; border-top: 1px dashed #aaa; margin-top: 20px; padding-top: 10px;
+    	}
+    	.regBox{
+    		width: 100%; text-align: center; margin-top: 10px;
+    	}
+    	.box{
+    		font-size: 0;
+    		margin-bottom: 20px;
+    	}
+    	.box>div{
+    		width: 18%; display: inline-block; text-align: right; font-size: 16px; text-align: justify; height: 36px; vertical-align: middle; margin-right: 2%;
+    	}
+    	.box span{
+    		display: inline-block;padding-left: 100%;
+    	}
+    	.box input{
+			width: 80%;
+			display: inline-block;
+			box-sizing: border-box;
+			background: #fff;
+			border: none;
+			border: 1px solid #aaa;
+			font-size: 16px;
+			height: 36px;
+			text-indent: 10px;
+    	}
+		button{
+			border: none; color: #fff; width: 50%; background: #aaa; margin: 0 auto; height: 40px; border-radius: 4px;
+    	}
+    	.sub{
+    		background: green;
+    	}
+    	.notice{
+    		background: pink; width: 80%; height: 30px; margin-left: 20%; margin-bottom: 5px; opacity: 0;
+    	}
+    </style>
+</head>
+<body>
+	<div id="loginBox">
+		<img src="logo.svg" alt="" id="logo"/>
+		<h1>订单看板监控系统</h1>
+		<div class="regBox">
+			<div class="notice"></div>
+			<div class="box">
+				<div>用 户 名<span></span></div>
+				<input type="text" name="username" id="username" placeholder="请填写您的用户名"/>
+			</div>
+			<div class="box">
+				<div>密 码<span></span></div>
+				<input type="password" name="mima" id="mima" placeholder="请填写您的密码"/>
+			</div>
+			<button>登录</button>
+		</div>
+	</div>
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+	    /* 声明一个数组用来存input值 */
+        var array = ["", ""];
+        /*方法调用*/
+        inputFn("#username", 0);
+        inputFn("#mima", 1);
+        /* 方法封装 */
+        /*键盘弹起时实时生效*/
+        function inputFn(ele, num) {
+            $(ele).keyup(function(){
+                var val = $(this).val().trim();
+                console.log(val);
+                array[num] = val;
+                inputArray();
+            });
+        }
+        /*遍历数组，判断input值是否存在于数组中*/
+        function inputArray() {
+            for (var i = 0, arrayLen = array.length; i < arrayLen; i++) {
+                //  如果值不在数组中 就返回 并 去掉颜色
+                if (array[i] == "" ||　array[i] == null) {
+                    $("button").removeClass("sub");
+                    console.log(array[i] + "无法提交" + i)
+                    return;
+                }
+            }
+            //
+            $("button").addClass("sub");
+        }
+</script>
+</body>
+</html>
+
+
