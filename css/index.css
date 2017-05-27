@@ -1,45 +1,29 @@
-body {
-  padding: 0;
-  margin: 20px; }
+@charset "UTF-8";
+body { padding: 0; margin: 20px; color: #333; font-family: "微软雅黑"; }
 
-.green {
-  background: #92d050; }
+.green { background: #35c783; }
 
-.yellow {
-  background: #ffff00; }
+.yellow { background: #fffc01; }
 
-.red {
-  background: red; }
+.red { background: #fe0002; }
 
-.gray {
-  background: #e0e0e2; }
+.gray1 { background: #eeeeee; }
 
-#myTable {
-  position: fixed;
-  top: 0; }
+.gray2 { background: #f6f6f6; }
 
-table {
-  width: 100%;
-  background: #fff;
-  border-collapse: collapse;
-  table-layout: fixed; }
-  table thead {
-    background: #fff; }
-  table th, table td {
-    text-align: center;
-    padding: 8px 0;
-    font-size: 14px;
-    border: 1px solid #666; }
-  table th {
-    font-size: 16px; }
-  table td {
-    /* text-overflow: ellipsis; */
-    overflow: hidden;
-    white-space: nowrap; }
+.gray3 { background: #e8e8e8; }
 
-input, button, p {
-  padding: 0;
-  margin: 0; }
+.gray4 { background: #e0e0e0; }
+
+.borderBold { border-right: 2px solid #999999; }
+
+#myTable { position: fixed; top: 0; }
+
+table { width: 100%; background: #fff; border-collapse: collapse; table-layout: fixed; }
+table thead { background: #fff; }
+table th, table td { text-align: center; padding: 8px 0; font-size: 14px; border: 1px solid #cccccc; }
+table th { font-size: 16px; }
+
+input, button, p, h1 { padding: 0; margin: 0; }
 
 /*# sourceMappingURL=index.css.map */
-
