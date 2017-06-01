@@ -7,9 +7,11 @@ body { padding: 0; margin: 20px; color: #333; font-family: "微软雅黑"; }
 
 .red { background: #fe0002; }
 
+.white { background: #fff; }
+
 .gray1 { background: #eeeeee; }
 
-.gray2 { background: #f6f6f6; }
+.gray2 { background: #eeeeee; }
 
 .gray3 { background: #e8e8e8; }
 
@@ -17,13 +19,56 @@ body { padding: 0; margin: 20px; color: #333; font-family: "微软雅黑"; }
 
 .borderBold { border-right: 2px solid #999999; }
 
-#myTable { position: fixed; top: 0; }
+.borderBot { border-bottom: 2px solid #999999; }
+
+.hidden, .hidden tr, .hidden th { overflow: hidden; height: 0; padding: 0; border: 0; margin: 0; visibility: hidden; }
+
+.hidden1, .hidden1 td, .hidden1 th { visibility: hidden; overflow: hidden; }
+
+#myTable { position: fixed; top: 20px; border-bottom: 2px solid #999999; }
+
+.borderTRBL div:first-child:before, .borderTRBL div:first-child:after, .borderTRBL div:last-child:before, .borderTRBL div:last-child:after { content: ""; width: 100%; height: 20px; background: #fff; position: fixed; top: 0; left: 0; z-index: 120; }
+.borderTRBL div:first-child:after, .borderTRBL div:last-child:after { top: auto; bottom: 0; }
+.borderTRBL div:last-child:before, .borderTRBL div:last-child:after { width: 20px; height: 100%; left: 0; }
+.borderTRBL div:last-child:after { left: auto; right: 0; }
 
 table { width: 100%; background: #fff; border-collapse: collapse; table-layout: fixed; }
+table th:nth-child(1) { width: 11%; }
+table th:nth-child(2) { width: 6%; }
+table th:nth-child(3) { width: 4%; }
+table th:nth-child(4) { width: 4%; }
+table th:nth-child(5) { width: 20%; }
+table th:nth-child(6) { width: 4%; }
+table th:nth-child(7) { width: 4%; }
+table th:nth-child(8) { width: 24%; }
+table th:nth-child(9) { width: 4%; }
+table th:nth-child(10) { width: 4%; }
+table th:nth-child(11) { width: 20%; }
+table th:nth-child(12) { width: 3%; }
 table thead { background: #fff; }
 table th, table td { text-align: center; padding: 8px 0; font-size: 14px; border: 1px solid #cccccc; }
 table th { font-size: 16px; }
 
-input, button, p, h1 { padding: 0; margin: 0; }
+.page, .pageX, .pageY { position: fixed; top: 0; left: 0; z-index: 10; }
+
+.page { width: 8px; height: 8px; border: 2px solid #a600c2; border-radius: 50%; background: #fff; margin: -5px 0 0 -5px; z-index: 99; }
+
+.pageX { width: 100%; border-top: 2px dashed #a600c2; }
+
+.pageY { height: 100%; border-right: 2px dashed #a600c2; }
+
+input, button, p, h1 { padding: 0; margin: 0; outline: 0; }
+
+#loginBox { width: 25%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#loginBox #logo { width: 100%; display: block; }
+#loginBox h1 { text-align: center; border-top: 1px dashed #aaa; margin-top: 20px; padding-top: 10px; }
+#loginBox .regBox { width: 100%; text-align: center; margin-top: 10px; }
+#loginBox .regBox .notice { background: #35c783; width: 80%; height: 30px; margin-left: 20%; margin-bottom: 5px; opacity: 0; text-align: left; text-indent: 10px; line-height: 30px; color: #fff; }
+#loginBox .regBox button { border: none; color: #fff; width: 50%; background: #aaa; margin: 0 auto; height: 40px; border-radius: 4px; font-size: 16px; }
+#loginBox .regBox .sub { background: #35c783; }
+#loginBox .regBox .box { font-size: 0; margin-bottom: 20px; }
+#loginBox .regBox .box div { width: 18%; display: inline-block; text-align: right; font-size: 16px; text-align: justify; height: 36px; vertical-align: middle; margin-right: 2%; }
+#loginBox .regBox .box span { display: inline-block; padding-left: 100%; }
+#loginBox .regBox .box input { width: 80%; display: inline-block; box-sizing: border-box; background: #fff; border: none; border: 1px solid #aaa; font-size: 16px; height: 36px; text-indent: 10px; }
 
 /*# sourceMappingURL=index.css.map */
